@@ -19,6 +19,7 @@ if (guess != 'heads' & guess != 'tails') {
     } else {
         res = 'lose';
     }
+    
     // Output the guess, outcome of the flip, and result
     console.log({ call : guess, flip : actual, result : res});
 }
