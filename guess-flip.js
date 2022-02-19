@@ -8,8 +8,8 @@ args['call']
 // Flip the coin and see if it matches the user's guess
 const guess = args.call
 if (guess != 'heads' & guess != 'tails') {
-    console.log("Error. no input.")
-    console.log("Usage: node guess-flip.js --call=[heads|tails]")
+    console.log("Error: no input.")
+    console.log("Usage: node guess-flip --call=[heads|tails]")
 } else {
     const actual = coinFlip();
     var res;
