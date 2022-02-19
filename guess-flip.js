@@ -7,15 +7,20 @@ const args = minimist(process.argv.slice(2));
 args['call']
 // Flip the coin and see if it matches the user's guess
 const guess = args.call
-const actual = coinFlip();
-var res;
-
-if (actual == guess) {
-    res = 'win';
+if (guess != 'heads' & guess != 'tails') {
+    console.log("Error. no input.")
+    console.log("Usage: node guess-flip.js --call=[heads|tails]")
 } else {
-    res = 'lose';
+    const actual = coinFlip();
+    var res;
+
+    if (actual == guess) {
+        res = 'win';
+    } else {
+        res = 'lose';
+    }
+    // Output the guess, outcome of the flip, and result
+    console.log({ call : guess, flip : actual, result : res});
 }
-// Output the guess, outcome of the flip, and result
-console.log({ call : guess, flip : actual, result : res});
 
 
